@@ -1,0 +1,2 @@
+singleton AppFunctions 0.1 AppFunctions.qml
+singleton AppConst 0.1 AppConst.qml

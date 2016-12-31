@@ -1,0 +1,3 @@
+singleton ArticleStore 0.1 ArticleStore.qml
+singleton ArticleContentStore 0.1 ArticleContentStore.qml
+singleton UserInfoStore 0.1 UserInfoStore.qml
