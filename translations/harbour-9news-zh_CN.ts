@@ -61,12 +61,12 @@
         <translation>发表评论</translation>
     </message>
     <message>
-        <location filename="../qml/view/pages/ArticleContentPage.qml" line="124"/>
+        <location filename="../qml/view/pages/ArticleContentPage.qml" line="127"/>
         <source>author</source>
         <translation>作者</translation>
     </message>
     <message>
-        <location filename="../qml/view/pages/ArticleContentPage.qml" line="128"/>
+        <location filename="../qml/view/pages/ArticleContentPage.qml" line="131"/>
         <source>source</source>
         <translation>来源</translation>
     </message>
@@ -88,14 +88,6 @@
         <location filename="../qml/view/pages/CommentWritePage.qml" line="134"/>
         <source>comment</source>
         <translation>评论</translation>
-    </message>
-</context>
-<context>
-    <name>CoverPage</name>
-    <message>
-        <location filename="../qml/view/cover/CoverPage.qml" line="38"/>
-        <source>My Cover</source>
-        <translation></translation>
     </message>
 </context>
 <context>
@@ -269,7 +261,8 @@
 <context>
     <name>harbour-9news</name>
     <message>
-        <location filename="../qml/harbour-9news.qml" line="118"/>
+        <location filename="../qml/harbour-9news.qml" line="68"/>
+        <location filename="../qml/harbour-9news.qml" line="123"/>
         <source>9News</source>
         <translation>久闻</translation>
     </message>

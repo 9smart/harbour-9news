@@ -62,7 +62,12 @@ ApplicationWindow
         }
 
     }
-    cover: Qt.resolvedUrl("view/cover/CoverPage.qml")
+    cover: CoverBackground {
+        CoverPlaceholder {
+            icon.source: Qt.resolvedUrl("view/graphics/logo.png")
+            text: qsTr("9News")
+        }
+    }
 
     allowedOrientations: defaultAllowedOrientations
 

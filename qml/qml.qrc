@@ -7,7 +7,6 @@
         <file>flux/adapters/StoreAdapter.qml</file>
         <file>flux/stores/qmldir</file>
         <file>flux/storeworkers/StoreWorker.qml</file>
-        <file>view/cover/CoverPage.qml</file>
         <file>view/pages/FirstPage.qml</file>
         <file>view/pages/SplashPage.qml</file>
         <file>view/components/PanelView.qml</file>
