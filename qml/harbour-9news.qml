@@ -42,6 +42,8 @@ import "flux/stores"
 
 ApplicationWindow
 {
+    allowedOrientations: Orientation.Portrait
+
     initialPage: Component {
         SplashPage{
             id: splashPage
@@ -68,8 +70,6 @@ ApplicationWindow
             text: qsTr("9News")
         }
     }
-
-    allowedOrientations: defaultAllowedOrientations
 
     PanelView {
         id: panelView
