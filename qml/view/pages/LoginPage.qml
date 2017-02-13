@@ -41,9 +41,9 @@ Page {
                 } else {
                     errorLabel.visible = false;
 
-                    UserInfoStore.token = json.auth;
-                    UserInfoStore.uid = json.uid;
-                    UserInfoStore.userInfo = json.info;
+                    MainStore.userInfoStore.token = json.auth;
+                    MainStore.userInfoStore.uid = json.uid;
+                    MainStore.userInfoStore.userInfo = json.info;
 
                     AppFunctions.showMsg(noti, qsTr("login ok"))
                     AppFunctions.popCurrentPage(pageStack);

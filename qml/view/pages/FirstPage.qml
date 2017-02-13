@@ -54,7 +54,7 @@ BasePanelPage {
 
         PullDownMenu {
             active: false
-            busy: ArticleStore.requestPending
+            busy: MainStore.articleStore.requestPending
             MenuItem {
                 text: qsTr("refresh")
                 onClicked: {
@@ -67,16 +67,16 @@ BasePanelPage {
             anchors.horizontalCenter: parent.horizontalCenter
             text: qsTr("load more")
             //FIXME pages indicated if there are more pages?
-            visible: ArticleStore.pages > 1 && ArticleStore.next_page < ArticleStore.pages
+            visible: MainStore.articleStore.pages > 1 && MainStore.articleStore.next_page < MainStore.articleStore.pages
             onClicked: {
-                AppActions.showArticleByPager(ArticleStore.last_dateline,
+                AppActions.showArticleByPager(MainStore.articleStore.last_dateline,
                                               "next",
-                                              ArticleStore.next_page)
+                                              MainStore.articleStore.next_page)
             }
         }
 
         spacing: Theme.paddingMedium
-        model: ArticleStore.articleModel
+        model: MainStore.articleStore.articleModel
         delegate: BackgroundItem {
             width: parent.width
             height: column.height

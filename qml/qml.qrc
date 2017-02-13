@@ -32,5 +32,6 @@
         <file>view/pages/AboutPage.qml</file>
         <file>view/graphics/logo.png</file>
         <file>view/pages/RegisterPage.qml</file>
+        <file>flux/stores/MainStore.qml</file>
     </qresource>
 </RCC>

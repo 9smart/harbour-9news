@@ -29,7 +29,7 @@ Panel {
             Button {
                 anchors.centerIn: parent
                 text: qsTr("login/register")
-                enabled: (UserInfoStore.uid == undefined || UserInfoStore.token == undefined)
+                enabled: (MainStore.userInfoStore.uid == undefined || MainStore.userInfoStore.token == undefined)
                 visible: enabled
                 onClicked: {
                     AppFunctions.toLoginPage(pageStack);
@@ -40,13 +40,13 @@ Panel {
                 width: height
                 anchors.centerIn: parent
                 fillMode: Image.PreserveAspectFit
-                enabled: (UserInfoStore.uid != undefined && UserInfoStore.token != undefined)
+                enabled: (MainStore.userInfoStore.uid != undefined && MainStore.userInfoStore.token != undefined)
                 visible: enabled
-                source: UserInfoStore.userInfo.avatar
+                source: MainStore.userInfoStore.userInfo.avatar
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        AppFunctions.toUserInfoPage(pageStack, UserInfoStore.uid);
+                        AppFunctions.toUserInfoPage(pageStack, MainStore.userInfoStore.uid);
                     }
                 }
             }
@@ -68,7 +68,7 @@ Panel {
             }
         }
         Repeater {
-            model: ArticleStore.categoryList
+            model: MainStore.articleStore.categoryList
             BackgroundItem {
                 width: parent.width
                 height: Theme.itemSizeSmall

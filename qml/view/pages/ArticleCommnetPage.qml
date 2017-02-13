@@ -19,7 +19,7 @@ Page {
         }
 
         PullDownMenu {
-            enabled: (UserInfoStore.uid != undefined && UserInfoStore.token != undefined)
+            enabled: (MainStore.userInfoStore.uid != undefined && MainStore.userInfoStore.token != undefined)
             visible: enabled
             MenuItem {
                 text: qsTr("send comment")
@@ -32,19 +32,19 @@ Page {
         }
 
         PushUpMenu {
-            enabled: (UserInfoStore.uid != undefined && UserInfoStore.token != undefined)
+            enabled: (MainStore.userInfoStore.uid != undefined && MainStore.userInfoStore.token != undefined)
             visible: enabled
             MenuItem {
                 text: qsTr("send comment")
                 onClicked: {
-                    AppFunctions.toCommentWritePage(pageStack, ArticleContentStore.id,
+                    AppFunctions.toCommentWritePage(pageStack, MainStore.articleContentStore.id,
                                                     AppConst._ACTION_POST_COMMENTS);
                 }
             }
         }
 
         spacing: Theme.paddingMedium
-        model: ArticleContentStore.commentsModel
+        model: MainStore.articleContentStore.commentsModel
         delegate: ListItem {
             width: parent.width
             contentHeight: Math.max(avatar.height, column.height) + sep.height + Theme.paddingMedium * 2
@@ -54,7 +54,7 @@ Page {
                 MenuItem {
                     text: qsTr("send comment")
                     onClicked: {
-                        var id = ArticleContentStore.commentsModel.get(index)._id;
+                        var id = MainStore.articleContentStore.commentsModel.get(index)._id;
                         AppFunctions.toCommentWritePage(pageStack,
                                                         id,
                                                         AppConst._ACTION_REPLY_COMMENTS);
@@ -71,7 +71,7 @@ Page {
                 height: Theme.iconSizeMedium
                 width: height
                 fillMode: Image.PreserveAspectFit
-                source: ArticleContentStore.commentsModel.get(index).user.avatar
+                source: MainStore.articleContentStore.commentsModel.get(index).user.avatar
             }
 
             Column {
@@ -86,21 +86,21 @@ Page {
                 Label {
                     color: Theme.highlightColor
                     font.pixelSize: Theme.fontSizeTiny
-                    text: ArticleContentStore.commentsModel.get(index).user.nickname
+                    text: MainStore.articleContentStore.commentsModel.get(index).user.nickname
                 }
                 Label {
                     color: Theme.secondaryHighlightColor
                     font.pixelSize: Theme.fontSizeTiny
-                    text: Utility.dateParseShortStr(ArticleContentStore.commentsModel.get(index).dateline)
+                    text: Utility.dateParseShortStr(MainStore.articleContentStore.commentsModel.get(index).dateline)
                           + "    "
-                          + ArticleContentStore.commentsModel.get(index).model
+                          + MainStore.articleContentStore.commentsModel.get(index).model
                 }
                 Label {
                     width: parent.width
                     wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                     color: Theme.primaryColor
                     font.pixelSize: Theme.fontSizeMedium
-                    text: ArticleContentStore.commentsModel.get(index).content
+                    text: MainStore.articleContentStore.commentsModel.get(index).content
                 }
                 // reply to commet
                 Column {
@@ -108,11 +108,11 @@ Page {
                     spacing: Theme.paddingSmall
                     Repeater {
                         id: repeater
-                        model: ArticleContentStore.commentsModel.get(itemIdx).replys.count
+                        model: MainStore.articleContentStore.commentsModel.get(itemIdx).replys.count
                         delegate: Item {
                             width: parent.width
                             height: replyColumn.height + Theme.paddingSmall * 2
-                            property var replyModel: ArticleContentStore.commentsModel
+                            property var replyModel: MainStore.articleContentStore.commentsModel
                                                         .get(itemIdx)
                                                         .replys
                                                         .get(index)

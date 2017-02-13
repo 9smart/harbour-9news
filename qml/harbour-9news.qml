@@ -126,8 +126,8 @@ ApplicationWindow
     // StoreAdapter is a utility to initial Store singleton component and
     // setup waitFor relationship. It is a workaround for QTBUG-49370
 
-    StoreAdapter {
+//    StoreAdapter {
 
-    }
+//    }
 
 }

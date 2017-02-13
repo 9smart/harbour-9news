@@ -17,7 +17,7 @@ StoreWorker {
         }
         onRequestResult: { //RequestRet ret, const QString &replyData
 //            ArticleStore.requestPending = false;
-            console.log("=== reqUserInfo "+replyData);
+//            console.log("=== reqUserInfo "+replyData);
 
             if (ret == BaseRequest.RET_ABORT) {
                 //TODO

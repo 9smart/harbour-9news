@@ -33,7 +33,7 @@ Page {
                 height: width
                 anchors.horizontalCenter: parent.horizontalCenter
                 fillMode: Image.PreserveAspectFit
-                source: UserInfoStore.detailUserInfo.avatar_hd
+                source: MainStore.userInfoStore.detailUserInfo.avatar_hd
             }
 
             Label {
@@ -41,7 +41,7 @@ Page {
                 anchors.horizontalCenter: parent.horizontalCenter
                 horizontalAlignment: Text.AlignHCenter
                 wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-                text: UserInfoStore.detailUserInfo.nickname
+                text: MainStore.userInfoStore.detailUserInfo.nickname
             }
         }
     }
@@ -53,10 +53,10 @@ Page {
         anchors.bottomMargin: Theme.paddingLarge
         text: qsTr("logout")
         onClicked: {
-            UserInfoStore.token = undefined;
-            UserInfoStore.uid = undefined;
-            UserInfoStore.userInfo = undefined;
-            UserInfoStore.detailUserInfo = undefined;
+            MainStore.userInfoStore.token = undefined;
+            MainStore.userInfoStore.uid = undefined;
+            MainStore.userInfoStore.userInfo = undefined;
+            MainStore.userInfoStore.detailUserInfo = undefined;
 
             AppFunctions.showMsg(noti, qsTr("logout"));
             AppFunctions.popCurrentPage(pageStack);

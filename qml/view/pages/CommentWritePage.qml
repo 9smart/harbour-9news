@@ -69,7 +69,7 @@ Page {
 
     function postComment() {
         reqPostComment.setParameters("id", commentWrite.id);
-        reqPostComment.setParameters("token", UserInfoStore.token);
+        reqPostComment.setParameters("token", MainStore.userInfoStore.token);
         reqPostComment.appendPostData("type", "news");
         reqPostComment.appendPostData("content", content.text);
         reqPostComment.appendPostData("model", Utility.deviceName());
@@ -78,7 +78,7 @@ Page {
 
     function postReply() {
         reqReplyComment.setParameters("id", commentWrite.id);
-        reqReplyComment.setParameters("token", UserInfoStore.token);
+        reqReplyComment.setParameters("token", MainStore.userInfoStore.token);
         reqReplyComment.appendPostData("content", content.text);
         reqReplyComment.appendPostData("model", Utility.deviceName());
         reqReplyComment.postRequest();

@@ -35,26 +35,26 @@ Page {
         contentHeight: column.height + Theme.paddingLarge
 
         PullDownMenu {
-            enabled: (UserInfoStore.uid != undefined && UserInfoStore.token != undefined)
+            enabled: (MainStore.userInfoStore.uid != undefined && MainStore.userInfoStore.token != undefined)
             visible: enabled
             MenuItem {
                 text: qsTr("send comment")
                 onClicked: {
                     AppFunctions.toCommentWritePage(pageStack,
-                                                    ArticleContentStore.id,
+                                                    MainStore.articleContentStore.id,
                                                     AppConst._ACTION_POST_COMMENTS);
                 }
             }
         }
 
         PushUpMenu {
-            enabled: (UserInfoStore.uid != undefined && UserInfoStore.token != undefined)
+            enabled: (MainStore.userInfoStore.uid != undefined && MainStore.userInfoStore.token != undefined)
             visible: enabled
             MenuItem {
                 text: qsTr("send comment")
                 onClicked: {
                     AppFunctions.toCommentWritePage(pageStack,
-                                                    ArticleContentStore.id,
+                                                    MainStore.articleContentStore.id,
                                                     AppConst._ACTION_POST_COMMENTS);
                 }
             }
@@ -75,7 +75,7 @@ Page {
                         id: titleLable
                         width: column.width - Theme.horizontalPageMargin
                         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-                        text: ArticleContentStore.topic
+                        text: MainStore.articleContentStore.topic
                         color: Theme.highlightColor
                         font {
                             pixelSize: Theme.fontSizeLarge
@@ -88,7 +88,7 @@ Page {
             Label {
                 anchors.left: parent.left
                 color: Theme.secondaryHighlightColor
-                text: Utility.dateParseLongStr(ArticleContentStore.dateline)
+                text: Utility.dateParseLongStr(MainStore.articleContentStore.dateline)
             }
             Item {
                 width: parent.width
@@ -106,7 +106,7 @@ Page {
                     wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                     color: Theme.secondaryColor
                     font.pixelSize: Theme.fontSizeSmall
-                    text: ArticleContentStore.summary
+                    text: MainStore.articleContentStore.summary
                 }
             }
             Label {
@@ -114,7 +114,7 @@ Page {
                 wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                 textFormat: Text.RichText
                 color: Theme.primaryColor
-                text: format(ArticleContentStore.content, width)
+                text: format(MainStore.articleContentStore.content, width)
                 onLinkActivated: {
                     Qt.openUrlExternally(link);
                 }
@@ -126,11 +126,11 @@ Page {
                 font.pixelSize: Theme.fontSizeSmall
                 text: qsTr("author")
                       +":"
-                      +ArticleContentStore.author
+                      +MainStore.articleContentStore.author
                       +"  "
                       +qsTr("source")
                       +":"
-                      +ArticleContentStore.source
+                      +MainStore.articleContentStore.source
 
             }
         }
