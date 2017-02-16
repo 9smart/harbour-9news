@@ -22,7 +22,7 @@ unix {
     _BASE=$$system(grep 'Version:*' $$PWD/rpm/harbour-9news.yaml)
     _RELEASE=$$system(grep 'Release:*' $$PWD/rpm/harbour-9news.yaml)
     _REV=$$system(if [ -d $$PWD/.git ]; then git rev-parse --short HEAD;fi)
-    $$system(echo $$_BASE > $$PWD/Version && echo $$_RELEASE >> $$PWD/Version && echo "Build: $$_REV" >> $$PWD/Version)
+    $$system(echo $$_BASE > $$PWD/Version && echo $$_RELEASE >> $$PWD/Version && echo "Build: $${_REV}" >> $$PWD/Version)
 
     DEFINES += \
         VERSION_FILE=\\\"/usr/share/$${TARGET}/Version\\\"

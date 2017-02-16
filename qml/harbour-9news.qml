@@ -37,7 +37,6 @@ import "view"
 import "view/pages"
 import "view/components"
 
-import "flux/adapters"
 import "flux/stores"
 
 ApplicationWindow
@@ -122,12 +121,4 @@ ApplicationWindow
         id: noti
          appName: qsTr("9News")
     }
-
-    // StoreAdapter is a utility to initial Store singleton component and
-    // setup waitFor relationship. It is a workaround for QTBUG-49370
-
-//    StoreAdapter {
-
-//    }
-
 }

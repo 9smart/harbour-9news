@@ -14,7 +14,7 @@ Name:       harbour-9news
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    News reader for 9smart.cn
 Version:    0.2
-Release:    1
+Release:    2
 Group:      Qt/Qt
 License:    LICENSE
 URL:        http://example.org/

@@ -4,20 +4,16 @@
         <file>flux/actions/ActionTypes.qml</file>
         <file>flux/actions/AppActions.qml</file>
         <file>flux/actions/qmldir</file>
-        <file>flux/adapters/StoreAdapter.qml</file>
         <file>flux/stores/qmldir</file>
-        <file>flux/storeworkers/StoreWorker.qml</file>
         <file>view/pages/FirstPage.qml</file>
         <file>view/pages/SplashPage.qml</file>
         <file>view/components/PanelView.qml</file>
         <file>view/AppFunctions.qml</file>
         <file>view/qmldir</file>
         <file>flux/stores/ArticleStore.qml</file>
-        <file>flux/storeworkers/ArticleStoreWorker.qml</file>
         <file>view/components/ArticleCard.qml</file>
         <file>view/graphics/mask_background_reposted.png</file>
         <file>view/pages/ArticleContentPage.qml</file>
-        <file>flux/storeworkers/ArticleContentStoreWorker.qml</file>
         <file>flux/stores/ArticleContentStore.qml</file>
         <file>view/pages/ArticleCommnetPage.qml</file>
         <file>view/components/Panel.qml</file>
@@ -25,7 +21,6 @@
         <file>view/pages/BasePanelPage.qml</file>
         <file>view/pages/LoginPage.qml</file>
         <file>flux/stores/UserInfoStore.qml</file>
-        <file>flux/storeworkers/UserInfoStoreWorker.qml</file>
         <file>view/pages/CommentWritePage.qml</file>
         <file>view/pages/UserInfoPage.qml</file>
         <file>view/AppConst.qml</file>

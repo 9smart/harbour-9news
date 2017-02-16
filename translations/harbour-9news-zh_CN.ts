@@ -261,8 +261,8 @@
 <context>
     <name>harbour-9news</name>
     <message>
-        <location filename="../qml/harbour-9news.qml" line="70"/>
-        <location filename="../qml/harbour-9news.qml" line="123"/>
+        <location filename="../qml/harbour-9news.qml" line="69"/>
+        <location filename="../qml/harbour-9news.qml" line="122"/>
         <source>9News</source>
         <translation>久闻</translation>
     </message>
