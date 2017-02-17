@@ -68,3 +68,9 @@ CONFIG += sailfishapp_i18n
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += \
     translations/harbour-9news-zh_CN.ts
+
+# translations can't be copyed into rpm package, just copy it manually
+# don't know if it is my evn problem or SDK bug
+zh.path = /usr/share/$${TARGET}/translations
+zh.files += $$PWD/translations/harbour-9news-zh_CN.qm
+INSTALLS += zh
